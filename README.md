@@ -1,4 +1,15 @@
-# Charcoal SteamOS Kernel
+# Charcoal SteamOS Kernel with MCS patches 
+## This is a modified version of the Charcoal SteamOS kernel (https://github.com/V10lator/linux-charcoal) with the addition of the patch at https://github.com/WoodyWoodster/mac80211-mcs-patch
+
+"Kernel patch that fixes WiFi stuck at 54 Mbps when your card has fewer spatial streams than the AP's basic MCS set requires."
+
+Some routers, like the Rogers Xfinity Gateway (mine), set spatial streams higher than what your network card supports (the Steam Deck network card only supports 2 spatial streams.) In that case, the kernel just disables MST. For more information on how this patch fixes it, visit https://github.com/WoodyWoodster/mac80211-mcs-patch
+
+Click here to get the precompiled binary: 
+
+# THIS REPOSITORY IS UNMAINTAINED.
+### Below is the original README
+
 [![build](https://github.com/V10lator/linux-charcoal/actions/workflows/push.yml/badge.svg)](https://github.com/V10lator/linux-charcoal/actions)
 
 Charcoal is an optimized Linux kernel for Steam Deck, Asus ROG Ally, and other AMD-powered handheld PCs, built on top of Valve's [linux-neptune](https://gitlab.steamos.cloud/jupiter/linux-integration). It pushes the base further - built with LLVM/LTO/Polly, optimized for Zen 2, and patched with best-in-class schedulers like BORE and ADIOS. The result is a kernel tuned specifically for handheld gaming: better CPU responsiveness, improved I/O throughput, higher hardware limits, and bundled controller drivers - all without the bloat of debugging and unused features.

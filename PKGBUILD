@@ -95,6 +95,7 @@ source=(
   "git+https://github.com/atar-axis/xpadneo.git#tag=v$_xpadneo_version"
    6.16-poc-selector-v2.6.1.patch 
    6.16-nap-v0.4.0.patch
+   skip-basic-mcs-check.patch
 )
 sha256sums=('0daf2f43066550133277d590943256685acab40a4f36fcc82c28285b80c3ed2c'
             '37452b4d09e5e42134ae24a61f2f656790837c327268074cf79d7dab3558b972'
@@ -143,7 +144,8 @@ sha256sums=('0daf2f43066550133277d590943256685acab40a4f36fcc82c28285b80c3ed2c'
             '1055bbbd32985017f4501d375648873bd598db084177d302aeeade56b47920e1'
             '26b3a811d38471a42229fa037cb6d2bb5ff78f19f45a17c7f263339ee67769a7'
             '14dabfb0452a3a817e8d809fb28eb7565512e95386d789c627b62baf136e001f'
-            '99d87a5c9cf47f257df81fabbabdcb9df02ff93c0c9caabf1bbd40d2e50fed6e')
+            '99d87a5c9cf47f257df81fabbabdcb9df02ff93c0c9caabf1bbd40d2e50fed6e'
+            'd3615dafa8cfa07cb28d185e754a790cd29308c3737aa21bc5b541b5f6efeef5')
 
 export KBUILD_BUILD_HOST=archlinux
 export KBUILD_BUILD_USER=$pkgbase
